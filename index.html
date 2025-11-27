@@ -398,27 +398,36 @@
           </div>
 
           <div>
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="name">Name*</label>
-                <input type="text" id="name" name="Name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="Email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message*</label>
-                <textarea id="Message" name="Message" rows="4" required></textarea>
-              </div>
-              <div id="formMessage" class="form-message" style="display: none;"></div>
-              <button type="submit" class="btn primary" id="submitBtn">
-                Send Message
-              </button>
-              <!-- <p class="form-note">
-                <small>Note: Replace 'YOUR_JOTFORM_ID' in script.js with your actual JotForm form ID. Get one free at <a href="https://www.jotform.com" target="_blank">jotform.com</a></small>
-              </p> -->
-            </form>
+            <div class="contact-form">
+              <iframe
+                id="JotFormIFrame-253306144320040"
+                title="Contact Form"
+                onload="window.parent.scrollTo(0,0)"
+                allowtransparency="true"
+                allow="geolocation; microphone; camera"
+                src="https://form.jotform.com/253306144320040"
+                frameborder="0"
+                style="min-width:100%;max-width:100%;height:539px;border:none;"
+                scrolling="no"
+              >
+              </iframe>
+              <script type="text/javascript">
+                var ifr = document.getElementById("JotFormIFrame-253306144320040");
+                if (ifr) {
+                  var src = ifr.src;
+                  var iframeParams = [];
+                  if (window.location.href && window.location.href.indexOf("?") > -1) {
+                    iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split("&"));
+                  }
+                  if (src && src.indexOf("?") > -1) {
+                    iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                    src = src.substr(0, src.indexOf("?"));
+                  }
+                  iframeParams.push("isIframeEmbed=1");
+                  ifr.src = src + "?" + iframeParams.join("&");
+                }
+              </script>
+            </div>
           </div>
         </div>
       </div>
