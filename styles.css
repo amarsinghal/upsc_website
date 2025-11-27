@@ -352,6 +352,12 @@ a {
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
 }
 
+.contact-form iframe {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+}
+
 .form-group {
   margin-bottom: 0.9rem;
 }
