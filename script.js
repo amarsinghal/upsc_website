@@ -40,7 +40,7 @@ if (yearEl) {
 // Get your free form ID at https://www.jotform.com
 // After creating a form, go to Settings > Form Settings to find your Form ID
 // Make sure your JotForm has fields named: name, email, and message (or update the field names below)
-const JOTFORM_ID = 'https://form.jotform.com/253306144320040';
+const JOTFORM_ID = '253306144320040';
 const JOTFORM_ENDPOINT = `https://submit.jotform.com/submit/${JOTFORM_ID}`;
 
 const contactForm = document.getElementById("contactForm");
