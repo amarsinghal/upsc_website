@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diwali Celebration Gallery - UPSC Chicago</title>
+  <meta name="description" content="Photos from Diwali Celebration - Uttar Pradesh Sangathan of Chicago" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../logo.jpg" />
+  <link rel="apple-touch-icon" href="../logo.jpg" />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+	/>
+
+  <style>
+    .event-gallery-header {
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .event-gallery-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .event-gallery-header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateX(-5px);
+    }
+    
+    .photo-section {
+      margin: 3rem 0;
+    }
+    
+    .photo-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+      border-bottom: 3px solid var(--orange);
+      padding-bottom: 0.5rem;
+    }
+    
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .photo-item {
+      position: relative;
+      border-radius: 0.8rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f5f5f5;
+      aspect-ratio: 4/3;
+    }
+    
+    .photo-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 10px,
+        #ffe2c4 10px,
+        #ffe2c4 20px
+      );
+      color: var(--red);
+      font-weight: 500;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .photo-item:hover .photo-caption {
+      opacity: 1;
+    }
+    
+    @media (max-width: 768px) {
+      .event-gallery-header h1 {
+        font-size: 2rem;
+      }
+      
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="../index.html">
+          <img
+            src="../logo.jpg"
+            alt="UPSC - Uttar Pradesh Sangathan of Chicago logo"
+            class="logo-image"
+          />
+          <span class="logo-text-en">Uttar Pradesh Sangathan of Chicago</span>
+        </a>
+      </div>
+
+      <nav class="nav" id="navbar">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#gallery">Gallery</a>
+        <a href="../index.html#events">Events</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Event Gallery Header -->
+  <div class="event-gallery-header">
+    <div class="container">
+      <a href="../index.html#gallery" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Gallery
+      </a>
+      <h1>Diwali Celebration</h1>
+      <p>Festival of Lights</p>
+    </div>
+  </div>
+
+  <!-- Photo Sections -->
+  <main class="section">
+    <div class="container">
+      <!-- Diya Lighting -->
+      <section class="photo-section">
+        <h2>Diya Lighting Ceremony</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 1</div>
+            <div class="photo-caption">Traditional diya lighting</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 2</div>
+            <div class="photo-caption">Community diya arrangement</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 3</div>
+            <div class="photo-caption">Evening illumination</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 4</div>
+            <div class="photo-caption">Rangoli with diyas</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cultural Performances -->
+      <section class="photo-section">
+        <h2>Cultural Performances</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 1</div>
+            <div class="photo-caption">Classical dance</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 2</div>
+            <div class="photo-caption">Musical performance</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 3</div>
+            <div class="photo-caption">Folk dance</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 4</div>
+            <div class="photo-caption">Stage performances</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 5</div>
+            <div class="photo-caption">Children's performances</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 6</div>
+            <div class="photo-caption">Community talent</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traditional Sweets & Food -->
+      <section class="photo-section">
+        <h2>Traditional Sweets & Food</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 1</div>
+            <div class="photo-caption">Diwali sweets display</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 2</div>
+            <div class="photo-caption">Traditional delicacies</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 3</div>
+            <div class="photo-caption">Food stalls</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 4</div>
+            <div class="photo-caption">Community feast</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rangoli & Decorations -->
+      <section class="photo-section">
+        <h2>Rangoli & Decorations</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 1</div>
+            <div class="photo-caption">Beautiful rangoli designs</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 2</div>
+            <div class="photo-caption">Decorative arrangements</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 3</div>
+            <div class="photo-caption">Traditional decorations</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 4</div>
+            <div class="photo-caption">Festive ambiance</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Group Photos -->
+      <section class="photo-section">
+        <h2>Group Photos & Memories</h2>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 1</div>
+            <div class="photo-caption">Community group photo</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 2</div>
+            <div class="photo-caption">Family celebrations</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 3</div>
+            <div class="photo-caption">Friends together</div>
+          </div>
+          <div class="photo-item">
+            <div class="photo-placeholder">Photo 4</div>
+            <div class="photo-caption">Diwali memories</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Uttar Pradesh Sangathan of Chicago — Connecting Communities, Celebrating Culture.</p>
+      <div class="footer-links">
+        <a href="../index.html">Back to Home</a>
+        <span class="footer-social">
+          <a href="https://www.facebook.com/groups/883422379787879/" target="_blank" class="footer-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="footer-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

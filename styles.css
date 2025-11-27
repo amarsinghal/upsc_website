@@ -143,6 +143,14 @@ a {
   gap: 0.6rem;
 }
 
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo-image {
   height: 42px;
   width: auto;
@@ -325,14 +333,38 @@ a {
   margin-top: 1rem;
 }
 
-.gallery-item {
-  border-radius: 0.8rem;
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
+.gallery-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.gallery-item.placeholder {
+.gallery-item-link:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item {
+  border-radius: 0.8rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item-link:hover .gallery-item {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: repeating-linear-gradient(
       45deg,
       #fff,
@@ -341,7 +373,49 @@ a {
       #ffe2c4 20px
     );
   color: var(--red);
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item-link:hover .gallery-item-image::after {
+  opacity: 1;
+}
+
+.gallery-item-title {
+  padding: 1rem 1rem 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.gallery-item-subtitle {
+  padding: 0 1rem 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Support for images when they're added */
+.gallery-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Forms */
